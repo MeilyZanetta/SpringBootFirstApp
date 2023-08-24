@@ -20,6 +20,11 @@ public class ProductController {
         return "Welcome to Spring Boot";
     }
 
+    @RequestMapping("/welcome")
+    public String welcome(){
+        return "Welcome to Spring Boot!!";
+    }
+
     @PostMapping("/product")
     public ResponseEntity<ProductID> createProduct(@RequestBody final Product product){
         System.out.println(product);
